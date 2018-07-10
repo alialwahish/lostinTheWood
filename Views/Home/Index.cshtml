@@ -1,0 +1,28 @@
+﻿<h1>Lost In The Woods <span style="font-size:20px;">List of local hiking trails</span></h1>
+
+
+<table  class="w3-table-all w3-centered">
+    <tr>
+        <th>Trail Name |</th>
+        <th>Trail Length |</th>
+        <th>Elevation Change</th>
+    </tr>
+    
+
+@foreach(var hike in ViewBag.Users){
+    <tr>
+    <td>
+    <a href=@Url.Action("TrailView","Home",new{id=@hike.Id}) >@hike.Name </a>
+    </td>
+    <td>@hike.Trail_Length</td>
+    <td>@hike.Elevation</td>
+
+    </tr>
+}
+
+
+
+
+</table>
+<button type="button" onclick="location.href='@Url.Action("addHikeView","Home")'">Add a Trail</button>
+

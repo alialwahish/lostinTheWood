@@ -1,0 +1,18 @@
+@using dapperTest.Models;
+@model User;
+
+<h1>Add a New Trail</h1>
+
+
+<form action="addTrail" method="POST">
+    <span>Trail Name: </span><input type="text" name="Name">
+    <span>Description: </span><input type="text" name="Description">
+    <span>Trail Length: </span><input type="" name="Trail_Length">
+    <span>Elevation Change: </span><input type="number" name="Elevation">
+    <span>Longitude & Latitude: </span><input type="text" name="Longitude"> <input type="text" name="Latitude">
+
+
+
+    <input type="submit" value="Create Record!">
+
+</form>
